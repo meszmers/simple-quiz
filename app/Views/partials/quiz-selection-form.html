@@ -1,0 +1,20 @@
+<form method="POST" action="/">
+    <div class="quiz-selection-form">
+        <div class="quiz-selection-form__wrapper">
+            <h2 class="center">Simple Quiz</h2>
+
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Name" required>
+
+            <label for="quiz">Select quiz:</label>
+            <select name="quiz-id" id="quiz" required>
+                <option value=""></option>
+                {% for quiz in data['quizzes'] %}
+                <option value="{{ quiz.id }}">{{ quiz.name }}</option>
+                {% endfor %}
+            </select>
+
+            <input type="submit" value="Start quiz">
+        </div>
+    </div>
+</form>

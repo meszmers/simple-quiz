@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    {% set currentQuestion = data['quiz'].quizQuestions[data['quiz_report'].quizReportAnswers|length] %}
+    {% set currentPercentage = data['quiz_report'].quizProgressPercentage %}
+
+    {% include 'partials/quiz-question.html' %}
+{% endblock %}

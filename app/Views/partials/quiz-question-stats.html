@@ -1,0 +1,9 @@
+<form action="/" method="get">
+    <div class="quiz-quiz-report">
+        <div style="text-align: center">
+            <h2>Thanks, {{ data['quiz_report'].userName }} </h2>
+            <p>You finished your quiz with result: {{ data['quiz_report_stats'].answeredCorrectly}}/{{ data['quiz_report_stats'].questionCount}}</p>
+        </div>
+        <input type="submit" value="Return to start">
+    </div>
+</form>
