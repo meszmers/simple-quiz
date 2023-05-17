@@ -5,3 +5,7 @@
 ``3. import data and tables from simple-quiz/migrations folder``
 
 ``4. php -S localhost:8000``
+
+<br>
+
+<img alt="" src="public/about.gif">
