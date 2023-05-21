@@ -15,7 +15,7 @@ class DatabasePDO
         if (self::$connection === null) {
             $connectionParams = [
                 'dbname' => $_ENV['DBNAME'],
-                'user' => $_ENV['USER'],
+                'user' => $_ENV['DBUSER'],
                 'password' => $_ENV['PASSWORD'],
                 'host' => $_ENV['HOST'],
                 'driver' => $_ENV['DRIVER'],
