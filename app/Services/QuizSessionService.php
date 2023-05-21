@@ -30,7 +30,7 @@ class QuizSessionService
      */
     public function getCurrentQuizReportId(): mixed
     {
-        return $_SESSION[self::$SESSION_VARIABLE_NAME];
+        return $_SESSION[self::$SESSION_VARIABLE_NAME] ?? null;
     }
 
     /**
