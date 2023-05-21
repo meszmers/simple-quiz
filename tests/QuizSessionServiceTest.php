@@ -12,7 +12,7 @@ class QuizSessionServiceTest extends TestCase
         $env->load();
 
         $sessionService = new QuizSessionService();
-        $quizReport = new QuizReport(4, 'RandomName', 1, '2017-01-17 16:22:44');
+        $quizReport = new QuizReport(rand(1, 1000), 'RandomName', rand(1, 100), '2017-01-17 16:22:44');
 
         $sessionService->storeCurrentQuizReportId($quizReport);
 
