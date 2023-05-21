@@ -28,6 +28,8 @@ class QuizServiceTest extends TestCase
                     self::assertInstanceOf(QuizQuestion::class, $quizQuestion);
 
                     if ($quizQuestion instanceof QuizQuestion) {
+                        $order = 0;
+
                         // Check if question is related to quiz
                         self::assertSame($quiz->getId(), $quizQuestion->getQuizQuestionId());
 
@@ -41,6 +43,9 @@ class QuizServiceTest extends TestCase
                             if ($quizQuestionAnswer instanceof QuizQuestionAnswer) {
                                 // Check if answer is related to question
                                 self::assertSame($quizQuestion->getId(), $quizQuestionAnswer->getQuizQuestionId());
+
+                                // Check if answers is sorted in the right order
+                                self::assertGreaterThan($order, $quizQuestionAnswer->getOrderNr());
                             }
                         }
                     }
