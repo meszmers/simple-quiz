@@ -46,6 +46,8 @@ class QuizServiceTest extends TestCase
 
                                 // Check if answers is sorted in the right order
                                 self::assertGreaterThan($order, $quizQuestionAnswer->getOrderNr());
+
+                                $order = $quizQuestionAnswer->getOrderNr();
                             }
                         }
                     }
